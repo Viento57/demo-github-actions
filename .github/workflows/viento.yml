@@ -1,0 +1,21 @@
+name: demo-github-actions
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Subiendo cambios
+        run: echo "Subiendo cambios al repositorio"
+      - name: Fecha y hora de la última modificación
+        run: date
+      - name: Usuario actual
+        run: whoami?
+      - name: Mostrar directorio actual
+        run: pwd
+      - name: Mostrar contenido del directorio
+        run: ls -la
+      - name: Mostrar variables de entorno
+        run: env
